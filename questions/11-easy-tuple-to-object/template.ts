@@ -1,1 +1,1 @@
-type TupleToObject<T extends readonly any[]> = any
+type TupleToObject<T extends readonly any[]> = {[x in TupleToUnion<T>]:x}
