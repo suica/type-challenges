@@ -1,1 +1,2 @@
-type RequiredKeys<T> = any
+type RequiredKeys<T> = GetDeletedKeys<T>
+
