@@ -8,14 +8,3 @@ type Diff<O, O1> = Omit<O & O1, keyof (O | O1)>
 // type b = keyof (Foo | Bar) // 'name'|'age'
 // 因此只需要从并中剔除交就得到了对称差
 // type c = Exclude<a, b>
-
-type Foo = {
-    name: string
-    age: string
-}
-type Bar = {
-    name: string
-    age: string
-    gender: number
-}
-type test0 = Diff<Foo, Bar>   // { gender: number }
