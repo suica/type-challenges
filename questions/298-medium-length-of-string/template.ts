@@ -9,6 +9,6 @@ type LengthHelper<T extends string> =
         //                     T extends `${infer A}${infer B}${infer C}${infer D}${infer E}${infer F}${infer G}` ? [A, B, C, D, E, F, ...LengthHelper<G>] :
         //                         T extends `${infer A}${infer B}${infer C}${infer D}${infer E}${infer F}` ? [A, B, C, D, E, ...LengthHelper<F>] :
         //                             T extends `${infer A}${infer B}${infer C}${infer D}${infer E}` ? [A, B, C, D, ...LengthHelper<E>] :
-                                        T extends `${infer A}${infer B}${infer C}${infer D}` ? [A, B, C, ...LengthHelper<D>] :
+        //                                 T extends `${infer A}${infer B}${infer C}${infer D}` ? [A, B, C, ...LengthHelper<D>] :
         //                                     T extends `${infer A}${infer B}${infer C}` ? [A, B, ...LengthHelper<C>] :
                                                 T extends `${infer A}${infer B}` ? [A, ...LengthHelper<B>] : [];
