@@ -7,4 +7,3 @@ type CapitalizeWordsHelper<T extends string[]> = T['length'] extends 0 ? '' :
             (R extends string[] ? `${Capitalize<First>}${CapitalizeWordsHelper<R>}` : never)
             : never)
         : ''
-type c = CapitalizeWords<'foo bar'>
