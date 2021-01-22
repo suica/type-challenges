@@ -1,4 +1,5 @@
 import { Equal, Expect } from '@type-challenges/utils'
+import {GetReadonlyKeys} from "./template";
 
 type cases = [
   Expect<Equal<'title', GetReadonlyKeys<Todo1>>>,
